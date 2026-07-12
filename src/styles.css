@@ -141,6 +141,10 @@
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
 @keyframes float-slow {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-14px) rotate(1deg); }
@@ -153,6 +157,31 @@
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
+@keyframes word-in {
+  from { opacity: 0; transform: translateY(60%); filter: blur(14px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+@keyframes aurora-drift {
+  0%   { transform: translate3d(-8%, -6%, 0) scale(1.1); }
+  25%  { transform: translate3d(6%, 4%, 0) scale(1.25); }
+  50%  { transform: translate3d(-4%, 8%, 0) scale(1.15); }
+  75%  { transform: translate3d(8%, -4%, 0) scale(1.3); }
+  100% { transform: translate3d(-8%, -6%, 0) scale(1.1); }
+}
+@keyframes aurora-drift-2 {
+  0%   { transform: translate3d(6%, 4%, 0) scale(1.2); }
+  50%  { transform: translate3d(-8%, -8%, 0) scale(1.35); }
+  100% { transform: translate3d(6%, 4%, 0) scale(1.2); }
+}
+@keyframes conic-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes scan-line {
+  0% { transform: translateY(-100%); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -161,11 +190,20 @@
 @utility animate-marquee {
   animation: marquee 40s linear infinite;
 }
+@utility animate-marquee-slow {
+  animation: marquee 80s linear infinite;
+}
+@utility animate-marquee-rev {
+  animation: marquee-reverse 60s linear infinite;
+}
 @utility animate-float {
   animation: float-slow 8s ease-in-out infinite;
 }
 @utility animate-pulse-glow {
   animation: pulse-glow 4s ease-in-out infinite;
+}
+@utility animate-conic {
+  animation: conic-spin 24s linear infinite;
 }
 @utility animate-fade-up {
   animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
