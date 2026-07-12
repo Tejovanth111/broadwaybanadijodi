@@ -77,22 +77,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Cognine — AI, Data & Digital Engineering for the Enterprise" },
+      { title: "Broadway bana di jodi" },
       {
         name: "description",
         content:
           "Cognine partners with Fortune 500 organizations to accelerate AI adoption, modernize data platforms, and engineer the products that move markets.",
       },
       { name: "author", content: "Cognine" },
-      { property: "og:title", content: "Cognine — AI, Data & Digital Engineering" },
+      { property: "og:title", content: "Broadway bana di jodi" },
       {
         property: "og:description",
         content:
-          "AI transformation, data engineering, cloud and intelligent automation for the enterprise.",
+          "Cognine partners with Fortune 500 organizations to accelerate AI adoption, modernize data platforms, and engineer the products that move markets.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0a0d18" },
+      { name: "twitter:title", content: "Broadway bana di jodi" },
+      { name: "twitter:description", content: "Cognine partners with Fortune 500 organizations to accelerate AI adoption, modernize data platforms, and engineer the products that move markets." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/90822a29-b5a5-4352-b015-5e4455301b90/id-preview-05b6d82f--623f4eae-20c5-43ea-963c-5ac1706259a4.lovable.app-1783835420087.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/90822a29-b5a5-4352-b015-5e4455301b90/id-preview-05b6d82f--623f4eae-20c5-43ea-963c-5ac1706259a4.lovable.app-1783835420087.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
